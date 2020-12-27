@@ -1,0 +1,20 @@
+body {
+    padding: 15px;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    border: 1px solid black;
+}
+
+.black, a {
+    color: black;
+}
+
+.black {
+    text-decoration: none;
+}

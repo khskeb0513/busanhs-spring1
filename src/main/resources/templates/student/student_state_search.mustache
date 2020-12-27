@@ -1,0 +1,22 @@
+{{>layout/header}}
+<form action="/student/findByState" method="GET">
+    <p>
+        <label>
+            상태:
+            <input type="text" name="state" maxlength="1" required>
+        </label>
+    </p>
+    <input type="submit" value="검색">
+</form>
+<ul>
+    <li>
+        A: 재학
+    </li>
+    <li>
+        B: 자퇴
+    </li>
+    <li>
+        C: 전출
+    </li>
+</ul>
+{{>layout/footer}}

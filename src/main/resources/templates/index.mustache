@@ -1,0 +1,58 @@
+{{>layout/header}}
+<h4>
+    User Domain
+</h4>
+{{#name}}
+    <ul>
+        <li>
+            User {{name}} login.
+        </li>
+        <li>
+            <a href="/user">User Settings</a>
+        </li>
+        <li>
+            <a href="/logout">Logout</a>
+        </li>
+    </ul>
+{{/name}}
+{{^name}}
+    <ul>
+        <li>
+            <a href="/login">Login</a>
+        </li>
+    </ul>
+{{/name}}
+<h4>
+    Wanna Web-GUI Application?
+</h4>
+<ul>
+    <li>
+        Student
+        <ul>
+            <li>
+                <a href="/student/findAll">findAll</a>
+            </li>
+            <li>
+                <a href="/student/findByState">findByState</a>
+            </li>
+            <li>
+                <a href="/student/findByName">findByName</a>
+            </li>
+            <li>
+                <a href="/student/findByGradeAndBan">findByGradeAndBan</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        System
+        <ul>
+            <li>
+                <a href="/system/schoolTime">schoolTime</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+<h4>
+    Wanna API Service?
+</h4>
+{{>layout/footer}}

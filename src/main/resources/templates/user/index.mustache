@@ -1,0 +1,22 @@
+{{>layout/header}}
+<h4>
+    Basic Information
+</h4>
+{{#email}}
+    <ul>
+        <li>
+            Name: {{#name}}{{name}}{{/name}}
+        </li>
+        <li>
+            Email: {{#email}}{{email}}{{/email}}
+        </li>
+    </ul>
+{{/email}}
+{{^email}}
+    <ul>
+        <li>
+            Should login to see this page.
+        </li>
+    </ul>
+{{/email}}
+{{>layout/footer}}
