@@ -10,6 +10,7 @@ spring:
       naming:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: none
   datasource:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     url: jdbc:sqlserver://0.tcp.jp.ngrok.io:14080
@@ -20,7 +21,7 @@ spring:
     console:
       enabled: true
   profiles:
-    include: oauth
+    include: oauth, real-db
   session:
     store-type: redis
   mustache:
