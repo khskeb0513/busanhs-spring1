@@ -9,8 +9,23 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 script: "./gradlew clean build"
-
 notifications:
   email:
     recipients:
       - khskeb0513@gmail.com
+
+before_deploy:
+  - zip -r busanhs-spring1
+  - mkdir -p deploy
+  - mv busanhs-spring1.zip deploy/busanhs-spring1
+
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: busanhs-spring1
+    region: ap-northeast-2
+    skip_cleanup: true
+    acl: private
+    local_dir: deploy
+    wait-until-deploy: true
