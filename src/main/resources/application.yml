@@ -16,7 +16,6 @@ spring:
     url: jdbc:sqlserver://0.tcp.jp.ngrok.io:14080
     username: unicool
     password: unicool
-  #    url: jdbc:sqlserver://192.168.0.27:1433
   h2:
     console:
       enabled: true
@@ -29,7 +28,3 @@ spring:
   devtools:
     livereload:
       enabled: true
-logging:
-  level:
-    web: debug
-#    org.springframework.security: debug
