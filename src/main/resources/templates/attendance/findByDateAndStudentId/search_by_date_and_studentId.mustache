@@ -1,0 +1,61 @@
+{{>layout/header}}
+<form action="/gui/attendance/findByDateAndStudentId" method="GET">
+    <p>
+        <label>
+            Start Date Range
+            <input type="date" name="startDate" required>
+        </label>
+    </p>
+    <p>
+        <label>
+            End Date Range
+            <input type="date" name="endDate" required>
+        </label>
+    </p>
+    <p>
+        <label>
+            StudentID:
+            <input type="text" name="studentId">
+        </label>
+    </p>
+    <input type="submit" value="검색">
+</form>
+<h4>
+    How to parse result.
+</h4>
+<table>
+    <tr>
+        <th>
+            Date Range
+        </th>
+        <th>
+            studentId
+        </th>
+        <th>
+            Result
+        </th>
+    </tr>
+    <tr>
+        <th>
+            ◯
+        </th>
+        <th>
+            ◯
+        </th>
+        <th>
+            Search data with date and studentId.
+        </th>
+    </tr>
+    <tr>
+        <th>
+            ◯
+        </th>
+        <th>
+            ✕
+        </th>
+        <th>
+            Search data with only date.
+        </th>
+    </tr>
+</table>
+{{>layout/footer}}

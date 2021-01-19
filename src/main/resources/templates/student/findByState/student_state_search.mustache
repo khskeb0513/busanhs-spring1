@@ -1,0 +1,20 @@
+{{>layout/header}}
+<form action="/gui/student/findByState" method="GET">
+    <p>
+        상태:
+        <label>
+            <input type="radio" name="state" value="A" required>
+            재학
+        </label>
+        <label>
+            <input type="radio" name="state" value="B" required>
+            전출
+        </label>
+        <label>
+            <input type="radio" name="state" value="C" required>
+            자퇴
+        </label>
+    </p>
+    <input type="submit" value="검색">
+</form>
+{{>layout/footer}}

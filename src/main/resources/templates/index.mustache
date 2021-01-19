@@ -1,11 +1,14 @@
 {{>layout/header}}
+<h2>
+    Welcome!
+</h2>
 <h4>
     User Domain
 </h4>
 {{#name}}
     <ul>
         <li>
-            User {{name}} login.
+            User {{name}}({{email}}) login.
         </li>
         <li>
             <a href="/user">User Settings</a>
@@ -30,16 +33,41 @@
         Student
         <ul>
             <li>
-                <a href="/student/findAll">findAll</a>
+                <a href="/gui/student/findAll">findAll</a>
             </li>
             <li>
-                <a href="/student/findByState">findByState</a>
+                <a href="/gui/student/findByState">findByState</a>
             </li>
             <li>
-                <a href="/student/findByName">findByName</a>
+                <a href="/gui/student/findByName">findByName</a>
             </li>
             <li>
-                <a href="/student/findByGradeAndBan">findByGradeAndBan</a>
+                <a href="/gui/student/findByGradeAndBan">findByGradeAndBan</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        Point
+        <ul>
+            <li>
+                <a href="/gui/point/findByStudentName">findByStudentName</a>
+            </li>
+            <li>
+                <a href="/gui/point/findByPointRangeAndDateRange">findByPointRangeAndDateRange</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        Attendance Record
+        <ul>
+            <li>
+                <a href="/gui/attendance/findByStudentName">findByStudentName</a>
+            </li>
+            <li>
+                <a href="/gui/attendance/findByDateAndStudentId">findByDateAndStudentId</a>
+            </li>
+            <li>
+                <a href="/gui/attendance/findByGradeAndBanAndDate">findByGradeAndBanAndDate</a>
             </li>
         </ul>
     </li>
@@ -47,7 +75,7 @@
         System
         <ul>
             <li>
-                <a href="/system/schoolTime">schoolTime</a>
+                <a href="/gui/system/schoolTime">schoolTime</a>
             </li>
         </ul>
     </li>

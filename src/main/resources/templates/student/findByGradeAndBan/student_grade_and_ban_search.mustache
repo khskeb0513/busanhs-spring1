@@ -1,0 +1,26 @@
+{{>layout/header}}
+<form action="/gui/student/findByGradeAndBan" method="GET">
+    <p>
+        학년:
+        <label>
+            <input type="radio" name="grade" value="1">
+            1
+        </label>
+        <label>
+            <input type="radio" name="grade" value="2">
+            2
+        </label>
+        <label>
+            <input type="radio" name="grade" value="3">
+            3
+        </label>
+    </p>
+    <p>
+        <label>
+            반:
+            <input type="number" name="ban" min="1" required>
+        </label>
+    </p>
+    <input type="submit" value="검색">
+</form>
+{{>layout/footer}}

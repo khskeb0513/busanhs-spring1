@@ -1,0 +1,17 @@
+{{>layout/header}}
+<form action="/gui/point/findByPointRangeAndDateRange" method="GET">
+    <p>
+        <label>
+            Start Date Range
+            <input type="date" name="dateStart" required>
+        </label>
+    </p>
+    <p>
+        <label>
+            End Date Range
+            <input type="date" name="dateEnd" required>
+        </label>
+    </p>
+    <input type="submit" value="검색">
+</form>
+{{>layout/footer}}

@@ -3,13 +3,13 @@
     <thead>
     <tr>
         <th>
-                STUDENT_ID
+            STUDENT_ID
         </th>
         <th>
-                NAME
+            NAME
         </th>
         <th>
-                GRADE
+            GRADE
         </th>
         <th>
             BAN
@@ -32,7 +32,7 @@
     </tr>
     </thead>
     <tbody>
-    {{#student_list}}
+    {{#student}}
         <tr>
             <th>
                 {{studentId}}
@@ -51,26 +51,26 @@
             </th>
             <th>
                 {{#rf_card_num}}
-                {{rf_card_num}}
+                    {{rf_card_num}}
                 {{/rf_card_num}}
             </th>
             <th>
                 {{#state}}
-                {{state}}
+                    {{state}}
                 {{/state}}
             </th>
             <th>
                 {{#outDate}}
-                {{outDate}}
+                    {{outDate}}
                 {{/outDate}}
             </th>
             <th>
                 {{#st_memo}}
-                {{st_memo}}
+                    {{st_memo}}
                 {{/st_memo}}
             </th>
         </tr>
-    {{/student_list}}
+    {{/student}}
     </tbody>
 </table>
 {{>layout/footer}}

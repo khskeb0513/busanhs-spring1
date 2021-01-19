@@ -1,5 +1,6 @@
 body {
     padding: 15px;
+    font-family: sans-serif;
 }
 
 table {
@@ -9,6 +10,7 @@ table {
 }
 th {
     border: 1px solid black;
+    font-weight: normal;
 }
 
 .black, a {
@@ -17,4 +19,8 @@ th {
 
 .black {
     text-decoration: none;
+}
+
+.gray {
+    background: gray;
 }

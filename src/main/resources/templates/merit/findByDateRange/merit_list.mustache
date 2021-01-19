@@ -1,0 +1,99 @@
+{{>layout/header}}
+<table>
+    <thead>
+    <tr class="gray">
+        <th>
+            <span title="Show student information when you click studentID.">
+                STUDENT_ID
+            </span>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            LOT_NO
+        </th>
+        <th>
+            DATE
+        </th>
+        <th>
+            TIME
+        </th>
+        <th>
+            TYPE
+        </th>
+        <th>
+            CODE
+        </th>
+        <th>
+            NOTE
+        </th>
+        <th>
+            POINT
+        </th>
+        <th>
+            WORK_DATE
+        </th>
+        <th>
+            GRADE
+        </th>
+        <th>
+            TEACHER_ID
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#merit_list}}
+        <tr class="gray">
+            <th>
+                <span title="Show student information when you click studentID.">
+                    <a onclick="window.open(this.href,'Student Information Page');return false;"
+                       href="/gui/student/findByStudentId?studentId={{studentId}}">
+                    {{studentId}}
+                    </a>
+                </span>
+            </th>
+        </tr>
+        {{#meritByStudent}}
+            <tr>
+                <th>
+                    {{keyNum}}
+                </th>
+                <th>
+                    {{mDate}}
+                </th>
+                <th>
+                    {{mTime}}
+                </th>
+                <th>
+                    {{meritSel}}
+                </th>
+                <th>
+                    {{meritCode}}
+                </th>
+                <th>
+                    {{#meritText}}
+                        {{meritText}}
+                    {{/meritText}}
+                </th>
+                <th>
+                    {{meritPoint}}
+                </th>
+                <th>
+                    {{#workDate}}
+                        {{workDate}}
+                    {{/workDate}}
+                </th>
+                <th>
+                    {{grade}}
+                </th>
+                <th>
+                    {{#teacherId}}
+                        {{teacherId}}
+                    {{/teacherId}}
+                </th>
+            </tr>
+        {{/meritByStudent}}
+    {{/merit_list}}
+    </tbody>
+</table>
+{{>layout/footer}}

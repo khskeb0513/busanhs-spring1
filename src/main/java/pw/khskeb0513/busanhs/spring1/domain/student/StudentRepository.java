@@ -11,4 +11,6 @@ public interface StudentRepository extends JpaRepository<Student, String> {
     List<Student> findByStateOrderByOutDateDesc(String state);
 
     List<Student> findByGradeAndBanAndStateOrderByGradeAscBanAscNumAsc(int grade, int ban, String state);
+
+    List<Student> findByStudentId(String studentId);
 }

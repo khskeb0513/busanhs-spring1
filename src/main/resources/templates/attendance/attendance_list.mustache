@@ -3,74 +3,66 @@
     <thead>
     <tr>
         <th>
-                STUDENT_ID
+            STUDENT_ID
         </th>
         <th>
-                NAME
+            DATE
         </th>
         <th>
-                GRADE
+            TIME
         </th>
         <th>
-            BAN
+            GRADE
         </th>
         <th>
-            NO
+            TYPE
         </th>
         <th>
-            RF_CARD_SN
+            MEMO
         </th>
         <th>
             STATE
         </th>
         <th>
-            MODIFIED_DATE
-        </th>
-        <th>
-            STUDENT_MEMO
+            TERMINAL
         </th>
     </tr>
     </thead>
     <tbody>
-    {{#student_list}}
+    {{#attendance_list}}
         <tr>
             <th>
                 {{studentId}}
             </th>
             <th>
-                {{name}}
+                {{inDate}}
+            </th>
+            <th>
+                {{inTime}}
             </th>
             <th>
                 {{grade}}
             </th>
             <th>
-                {{ban}}
+                {{type}}
             </th>
             <th>
-                {{num}}
-            </th>
-            <th>
-                {{#rf_card_num}}
-                {{rf_card_num}}
-                {{/rf_card_num}}
+                {{#memo}}
+                    {{memo}}
+                {{/memo}}
             </th>
             <th>
                 {{#state}}
-                {{state}}
+                    {{state}}
                 {{/state}}
             </th>
             <th>
-                {{#outDate}}
-                {{outDate}}
-                {{/outDate}}
-            </th>
-            <th>
-                {{#st_memo}}
-                {{st_memo}}
-                {{/st_memo}}
+                {{#stdName}}
+                    {{stdName}}
+                {{/stdName}}
             </th>
         </tr>
-    {{/student_list}}
+    {{/attendance_list}}
     </tbody>
 </table>
 {{>layout/footer}}

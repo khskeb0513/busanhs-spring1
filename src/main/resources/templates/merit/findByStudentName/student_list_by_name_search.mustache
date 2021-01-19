@@ -3,13 +3,13 @@
     <thead>
     <tr>
         <th>
-                STUDENT_ID
+            STUDENT_ID
         </th>
         <th>
-                NAME
+            NAME
         </th>
         <th>
-                GRADE
+            GRADE
         </th>
         <th>
             BAN
@@ -18,16 +18,13 @@
             NO
         </th>
         <th>
-            RF_CARD_SN
-        </th>
-        <th>
             STATE
         </th>
         <th>
-            MODIFIED_DATE
+            STUDENT_MEMO
         </th>
         <th>
-            STUDENT_MEMO
+            SELECT
         </th>
     </tr>
     </thead>
@@ -50,27 +47,25 @@
                 {{num}}
             </th>
             <th>
-                {{#rf_card_num}}
-                {{rf_card_num}}
-                {{/rf_card_num}}
-            </th>
-            <th>
                 {{#state}}
-                {{state}}
+                    {{state}}
                 {{/state}}
             </th>
             <th>
-                {{#outDate}}
-                {{outDate}}
-                {{/outDate}}
+                {{#st_memo}}
+                    {{st_memo}}
+                {{/st_memo}}
             </th>
             <th>
-                {{#st_memo}}
-                {{st_memo}}
-                {{/st_memo}}
+                <a href="/gui/point/findByStudentName?studentId={{studentId}}">SELECT</a>
             </th>
         </tr>
     {{/student_list}}
     </tbody>
 </table>
+<script>
+    function select(studentId) {
+        window.location.href = "/gui/point/findByStudentName?studentId=" + studentId;
+    }
+</script>
 {{>layout/footer}}

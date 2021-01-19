@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import pw.khskeb0513.busanhs.spring1.domain.student.State;
 import pw.khskeb0513.busanhs.spring1.domain.student.Student;
 import pw.khskeb0513.busanhs.spring1.domain.student.StudentRepository;
 
@@ -31,23 +32,17 @@ public class StudentService {
     }
 
     @Transactional(readOnly = true)
-    public List<Student> findByState(String state) {
-        switch (state) {
-            case "A":
-                state = "Y";
-                break;
-            case "B":
-                state = "M";
-                break;
-            case "C":
-                state = "N";
-                break;
-        }
-        return studentRepository.findByStateOrderByOutDateDesc(state);
+    public List<Student> findByState(State state) {
+        return studentRepository.findByStateOrderByOutDateDesc(state.getDbStr());
     }
 
     @Transactional(readOnly = true)
     public List<Student> findByGradeAndBan(int grade, int ban) {
         return studentRepository.findByGradeAndBanAndStateOrderByGradeAscBanAscNumAsc(grade, ban, "Y");
+    }
+
+    @Transactional(readOnly = true)
+    public Student findByStudentId(String studentId) {
+        return studentRepository.findByStudentId(studentId).get(0);
     }
 }

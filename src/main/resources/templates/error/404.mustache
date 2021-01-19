@@ -1,0 +1,31 @@
+{{>layout/header}}
+<h2>
+    Error
+</h2>
+<ul>
+    <li>
+        timestamp: {{#timestamp}}{{timestamp}}{{/timestamp}}
+    </li>
+    <li>
+        status: {{#status}}{{status}}{{/status}}
+    </li>
+    <li>
+        error: {{#error}}{{error}}{{/error}}
+    </li>
+    <li>
+        exception: {{#exception}}{{exception}}{{/exception}}
+    </li>
+    <li>
+        message: {{#message}}{{message}}{{/message}}
+    </li>
+    <li>
+        errors: {{#errors}}{{errors}}{{/errors}}
+    </li>
+    <li>
+        trace: {{#trace}}{{trace}}{{/trace}}
+    </li>
+    <li>
+        path: {{#path}}{{path}}{{/path}}
+    </li>
+</ul>
+{{> layout/footer}}
