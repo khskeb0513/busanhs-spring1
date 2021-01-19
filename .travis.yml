@@ -29,3 +29,13 @@ deploy:
     acl: private
     local_dir: deploy
     wait-until-deploy: true
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: busanhs-spring1
+    key: busanhs-spring1.zip
+    bundle_type: zip
+    application: busanhs-spring1
+    deployment-group: busanhs-spring1-group
+    region: ap-northeast-2
+    wait-until-deploy: true
