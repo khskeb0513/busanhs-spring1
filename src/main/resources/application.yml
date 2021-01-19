@@ -21,9 +21,9 @@ spring:
     console:
       enabled: true
   profiles:
-    include: oauth, real-db
+    include: oauth, production
   session:
-    store-type: redis
+    store-type: none
   mustache:
     cache: false
   devtools:
